@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="py-1 top" id="topNavBar"></div>
-    <div class="pt-4 pb-5" id="buttomNavBar"></div>
+    <div class="pt-1 pb-5" id="buttomNavBar"></div>
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light"
       id="ftco-navbar"
@@ -71,8 +71,6 @@
           <a
             href="./contact.html"
             class="btn-custom"
-            data-toggle="modal"
-            data-target="#exampleModalCenter"
             >Inquire Now</a
           >
         </div>
@@ -118,7 +116,7 @@
 
         <div class="row block-9">
           <div class="col-md-8">
-            <form action="#" class="p-4 p-md-5 contact-form">
+            <form action="#" class="p-4 p-md-5 contact-form" id="contactForm">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -126,6 +124,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Your Name"
+                      id="name"
                     />
                   </div>
                 </div>
@@ -135,6 +134,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Your Email"
+                      id="email"
                     />
                   </div>
                 </div>
@@ -144,6 +144,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Subject"
+                      id="subject"
                     />
                   </div>
                 </div>
@@ -151,7 +152,7 @@
                   <div class="form-group">
                     <textarea
                       name=""
-                      id=""
+                      id="message"
                       cols="30"
                       rows="7"
                       class="form-control"
@@ -172,12 +173,10 @@
             </form>
           </div>
 
-          <div class="col-md-4 d-flex pl-md-5" id="contactInfo">
-            
-          </div>
-          <div class="col-md-12">
+          <div class="col-md-4 d-flex pl-md-5" id="contactInfo"></div>
+          <!-- <div class="col-md-12">
             <div id="map" class="map"></div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -216,13 +215,13 @@
                   </li>
 
                   <li>
-                    <a href="#"
+                    <a href="./privacyPolicy.html"
                       ><span class="fa fa-chevron-right mr-2"></span>Privacy
                       Policy</a
                     >
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="./t&c.html"
                       ><span class="fa fa-chevron-right mr-2"></span>Terms of
                       Use</a
                     >
@@ -418,5 +417,10 @@
     </script>
 
     <script src="./firebase/contact.js"></script>
+
+    <script
+      src="//code.tidio.co/asx2qga8nofl3b5zozpvqych4bj9fpxc.js"
+      async
+    ></script>
   </body>
 </html>

@@ -6,7 +6,8 @@ const footerSocials = document.querySelector("#footerSocials");
 const aboutUpdateCompletedPorjects = document.querySelector(
   "#aboutUpdateCompletedPorjects"
 );
-const contactInfo = document.querySelector("#contactInfo");
+
+console.log(aboutUpdateCompletedPorjects);
 
 // Setup nav bar
 
@@ -54,14 +55,12 @@ db.collection("siteSettings")
                 </div>
               </div>
               <div
-                class="col-sm-12 col-md-6 col-lg-7 d-flex topper align-items-center text-lg-right justify-content-end"
+                class="col-sm-12 col-md-6 col-lg-4 d-flex topper align-items-center text-lg-right justify-content-end"
               >
                 <p class="mb-0 register-link">
                   <a
                     href="./contact.html"
                     class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
                     >Inquire Now</a
                   >
                 </p>
@@ -77,10 +76,12 @@ db.collection("siteSettings")
           <!-- TODO: Change logo -->
           <div class="col-md-4 d-flex mb-2 mb-md-0">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-              <span class="flaticon flaticon-crane"></span>
-              <span class="ml-2"
-                >Metcon <small>Construction Company</small></span
-              >
+              <image src="./images/metcon-logo.png" style="
+              width: 90px;
+              height: 90px;
+              justify-content: center;
+              align-items: center;
+            " />
             </a>
           </div>
           <div class="col-md-4 d-flex topper mb-md-0 mb-2 align-items-center">
@@ -89,87 +90,39 @@ db.collection("siteSettings")
             </div>
             <div class="pr-md-4 pl-md-3 pl-3 text">
               <p class="con">
-                <span>Free Call</span> <a href="tel: ${
+                <span>Phone line 1:</span> <a href="tel: ${
                   details.data().phoneNumber
-                }"><span>${details.data().phoneNumber}</span></a>
+                }" ><span>${details.data().phoneNumber}</span></a>
+              </p>
+              <p class="con">
+                <span>Phone line 2:</span> <a href="tel: ${
+                  details.data().phoneNumber2
+                }"><span>${details.data().phoneNumber2}</span></a>
               </p>
               <p class="con">Call Us Now 24/7 Customer Support</p>
             </div>
           </div>
-          <div class="col-md-4 d-flex topper mb-md-0 align-items-center">
-            <div class="icon d-flex justify-content-center align-items-center">
-              <span class="fa fa-paper-plane"></span>
-            </div>
-            <div class="text pl-3 pl-md-3">
-              <p class="hr"><span>Our Location</span></p>
-              <p class="con">
-              ${details.data().businessAddress}
-              </p>
-            </div>
-          </div>
         </div>
       </div>`;
-
-    contactInfo.innerHTML = `
-      <div class="row" >
-              <div class="dbox w-100 d-flex">
-                <div
-                  class="icon d-flex align-items-center justify-content-center"
-                >
-                  <span class="fa fa-map-marker"></span>
-                </div>
-                <div class="text">
-                  <p>
-                    <span>Address:</span>${details.data().businessAddress}
-                  </p>
-                </div>
-              </div>
-              <div class="dbox w-100 d-flex">
-                <div
-                  class="icon d-flex align-items-center justify-content-center"
-                >
-                  <span class="fa fa-phone"></span>
-                </div>
-                <div class="text">
-                  <p>
-                    <span>Phone:</span>
-                    <a href="${details.data().phoneNumber}">${
-      details.data().phoneNumber
-    }</a>
-                  </p>
-                </div>
-              </div>
-              <div class="dbox w-100 d-flex">
-                <div
-                  class="icon d-flex align-items-center justify-content-center"
-                >
-                  <span class="fa fa-paper-plane"></span>
-                </div>
-                <div class="text">
-                  <p>
-                    <span>Email:</span>
-                    <a href="mailto:${details.data().email}">${
-      details.data().email
-    }</a>
-                  </p>
-                </div>
-              </div>
-              </div>
-            </div>
-      `;
 
     footerItems.innerHTML = `
     <ul>
       <li>
         <span class="fa fa-map-marker mr-3"></span
         ><span class="text"
-          >${details.data().businessAddress}</span
+          >${details.data().businessAdress2}</span
         >
       </li>
       <li>
         <a href="tel: ${details.data().phoneNumber}"
           ><span class="fa fa-phone mr-3"></span
-          ><span class="text">${details.data().phoneNumber}</span></a
+          ><span class="text">+${details.data().phoneNumber}</span></a
+        >
+      </li>
+      <li>
+        <a href="tel: ${details.data().phoneNumber2}"
+          ><span class="fa fa-phone mr-3"></span
+          ><span class="text">+${details.data().phoneNumber2}</span></a
         >
       </li>
       <li>

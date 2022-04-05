@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "metcon-e28d2"
+  },
+  "targets": {
+    "metcon-e28d2": {
+      "hosting": {
+        "client": [
+          "metcon-e28d2"
+        ],
+        "admin": [
+          "metcon-admin"
+        ]
+      }
+    }
   }
 }
